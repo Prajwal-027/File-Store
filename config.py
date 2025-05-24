@@ -80,7 +80,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://")
+URL = environ.get("URL", "https://bottom-aurore-prajwalpatil-a4baef70.koyeb.app/")
 
 
 # Don't Remove Credit Tg - @VJ_Botz
