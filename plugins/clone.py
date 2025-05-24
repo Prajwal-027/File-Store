@@ -11,7 +11,7 @@ from pyrogram.errors.exceptions.bad_request_400 import AccessTokenExpired, Acces
 from config import API_ID, API_HASH, DB_URI, DB_NAME, CLONE_MODE
 
 mongo_client = MongoClient(DB_URI)
-mongo_db = mongo_client["cloned_vjbotz"]
+mongo_db = mongo_client["cloned_xpbotz"]
 
 @Client.on_message(filters.command("clone") & filters.private)
 async def clone(client, message):
@@ -49,7 +49,7 @@ async def clone(client, message):
         mongo_db.bots.insert_one(details)
         await msg.edit_text(f"<b>sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʟᴏɴᴇᴅ ʏᴏᴜʀ ʙᴏᴛ: @{bot.username}.</b>")
     except BaseException as e:
-        await msg.edit_text(f"⚠️ <b>Bot Error:</b>\n\n<code>{e}</code>\n\n**Kindly forward this message to @KingVJ01 to get assistance.**")
+        await msg.edit_text(f"⚠️ <b>Bot Error:</b>\n\n<code>{e}</code>\n\n**Kindly forward this message to @tenxbackupchannel to get assistance.**")
 
 @Client.on_message(filters.command("deletecloned") & filters.private)
 async def delete_cloned_bot(client, message):
